@@ -134,15 +134,14 @@ body {
 .content {
     width: 100%;
     height: 100%;
+    padding: 20px 20px;
 }
 .button-container {
+    display: flex;
+    justify-content: flex-end;
     position: relative;
-    padding: 20px;
 }
 .button-container > button {
-    position: absolute;
-    right: 40px;
-    top: 33px;
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
@@ -152,25 +151,27 @@ body {
 .content > h1 {
     padding-top: 60px;
     padding-bottom: 27px;
-    padding-left: 32px;
     font-weight: 500;
     font-size: 32px;
     line-height: 38.73px;
 }
 .dashboard-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr;
         width: 100%;
-        gap: 48px;
-        padding: 0 32px;
+        gap: 24px;
 }
 .card{
     background-color: #fff;
     border: 1px solid #E3E7EE;
     padding: 20px;
+    border-radius: 5px;
 }
 .card-header {
+    display: flex;
+    align-items: center;
     position: relative;
+    justify-content: space-between;
 }
 .card-header-text > span {
     display: block;
@@ -187,18 +188,24 @@ body {
     line-height: 29.05px;
 }
 .card-header-icon {
-    position: absolute;
-}
-.red {
     width: 50px;
     height: 50px;
-    background-color: #CD2356;
-    right: 0;
-    top: -15px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.card-header-icon.red{
+    background-color: #CD2356;
+}
+.card-header-icon.lightblue {
+    background-color: #23A4CD;
+}
+.card-header-icon.orange {
+    background-color: #CD7523;
+}
+.card-header-icon.blue {
+    background-color: #1A46E4;
 }
 .card-footer {
     display: flex;
@@ -211,62 +218,16 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 16.94px;
+    padding: 10px 15px;
+    border-radius: 5px;   
+}
+.card-footer-changes.green {
+    background-color: #3AC56926;
     color: #3AC569;
 }
-.card-footerchanges {
-    display: block;
-    position: relative;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16.94px;
-    color: #CD2356;
-}
-.green {
-    width: 57px;
-    height: 33px;
-    background-color: #3AC56926;
-    padding: 5px;
-    border-radius: 5px;
-}
-.pink {
-    width: 57px;
-    height: 33px;
+.card-footer-changes.pink {
     background-color: #CD235626;
-    padding: 5px;
-    border-radius: 5px;
-}
-.orange {
-    width: 50px;
-    height: 50px;
-    background-color: #CD7523;
-    right: 0;
-    top: -15px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-}
-.lightblue {
-    width: 50px;
-    height: 50px;
-    background-color: #23A4CD;
-    right: 0;
-    top: -15px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-}
-.blue {
-    width: 50px;
-    height: 50px;
-    background-color: #1A46E4;
-    right: 0;
-    top: -15px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+    color: #CD2356;
 }
 .card-footer-span {
     font-weight: 400;
@@ -275,7 +236,26 @@ body {
     color: #616681;
     align-self: center;
 }
-
+.table-container {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.02), 0px 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    margin-top: 60px;
+}
+.table-container > table {
+    width: 100%;
+}
+.table {
+    border-collapse: collapse;
+}
+.table td, .table th {
+    padding: 20px 10px;
+  }
+.table > th {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.table tr:nth-child(even) { background-color: #f2f2f2; }
 @media (min-width: 768px) {
     .nav-bar {
         padding: 20px 48px;
@@ -315,6 +295,14 @@ body {
     .dashboardcontent-pages > p {
         padding-left: 48px;
     }
+    .dashboard-grid {
+        grid-template-columns: repeat(4, 1fr);
+}
+.content {
+    width: 100%;
+    height: 100%;
+    padding: 20px 32px;
+}
     
     
 }
