@@ -242,6 +242,10 @@ body {
     border-radius: 5px;
     margin-top: 60px;
 }
+.table-container > h1 {
+    padding: 20px;
+    font-size: 20px;
+}
 .table-container > table {
     width: 100%;
 }
@@ -249,13 +253,110 @@ body {
     border-collapse: collapse;
 }
 .table td, .table th {
-    padding: 20px 10px;
+    padding: 20px 20px;
   }
-.table > th {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.table-header > th{
+    text-align: left;
 }
-.table tr:nth-child(even) { background-color: #f2f2f2; }
+.table tr:nth-child(odd) { background-color: #f2f2f2; }
+.table-header {
+background-color: #F9F9F9;
+}
+.tablerow-data {
+    padding: 20px 10px;
+}
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.user > img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user > span {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18.15px;
+    color: #3D4159;
+}
+.company {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.company-logo {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: purple;
+}
+.company-logo.yellow{
+    background-color: #FDEB4C;
+}
+.company-logo.blue{
+    background-color: #0E58E8;
+}
+.company-logo.pink{
+    background-color: #CD2356;
+}
+.company-logo.lightblue{
+    background-color: #1977CD;
+}
+.company-logo.black{
+    background-color: #000000;
+}
+.company-logo.lightpurple{
+    background-color: #CA2B9D;
+}
+.company-logo.lightgreen{
+    background-color: #3AC569;
+}
+.company-name {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18.15px;
+    color: #3D4159;
+}
+.offer {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18.15px;
+    color: #3D4159;
+}
+.status {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+}
+.status-indicator.active {
+    background-color: #3AC569;
+}
+.status-indicator.inactive {
+    background-color: #F3AA66;
+}
+.status-text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18.15px;
+    color: #3D4159;
+}
+.action-button {
+    border: 1px solid #7E858E;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    color: #7E858E;
+}
 @media (min-width: 768px) {
     .nav-bar {
         padding: 20px 48px;
