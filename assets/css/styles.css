@@ -6,6 +6,8 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
     font-family: 'Inter', sans-serif;
@@ -143,11 +145,14 @@ body {
     position: relative;
 }
 .button-container > button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     border-radius: 5px;
     border: none;
     background-color: #0E58E8;
     color: #fff;
+}
+.button-container > button:hover {
+    background-color: #1660EF;
 }
 .content > h1 {
     padding-top: 60px;
@@ -359,6 +364,9 @@ background-color: #F9F9F9;
     background-color: #fff;
     color: #7E858E;
 }
+.action-button:hover {
+    background-color: #eee;
+}
 @media (min-width: 768px) {
     .nav-bar {
         padding: 20px 48px;
@@ -394,11 +402,11 @@ background-color: #F9F9F9;
     .main {
         display: flex;
         padding: 5px 0;
-        margin-top: 70px;
+        margin-top: 65px;
     }
     .side-bar {
         width: 250px;
-        height: calc(100%-70px);
+        height: calc(100% - 70px);
         position: fixed;
         left: 0;
         overflow-x: hidden;
@@ -415,7 +423,7 @@ background-color: #F9F9F9;
 }
 .content {
     width: 100%;
-    height: calc(100%-70px);
+    height: calc(100% - 70px);
     padding: 20px 32px;
     margin-left: 250px;
 }
